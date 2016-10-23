@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Coordinator"
+            android:name=".DrawerActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -18,7 +18,13 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".AddActivity">
+        <activity android:name=".accounts.AccountsActivity"/>
+        <activity android:name=".accounts.AccountAddActivity"/>
+        <activity android:name=".records.RecordsActivity"/>
+        <activity android:name=".periods.PeriodsActivity"/>
+        <activity android:name=".records.RecordAddActivity">
+        </activity>
+        <activity android:name=".periods.PeriodAddActivity">
         </activity>
     </application>
 

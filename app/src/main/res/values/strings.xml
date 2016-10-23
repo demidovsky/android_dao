@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">DaoTest</string>
+    <string name="app_name">GZM</string>
+    <string name="navigation_drawer_open">open</string>
+    <string name="navigation_drawer_close">close</string>
+
+    <string-array name="years_array">
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+    </string-array>
+
 </resources>

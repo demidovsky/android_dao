@@ -9,6 +9,9 @@ import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 
+import pro.dimmy.daotest.accounts.Account;
+import pro.dimmy.daotest.accounts.AccountsDAO;
+
 /**
  * Created by ddemidovskiy on 17.10.2016.
  */
@@ -22,10 +25,10 @@ public class DBHelper extends OrmLiteSqliteOpenHelper
     private static final String DATABASE_NAME ="daotest.db";
 
     //с каждым увеличением версии, при нахождении в устройстве БД с предыдущей версией будет выполнен метод onUpgrade();
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     //ссылки на DAO соответсвующие сущностям, хранимым в БД
-    private AccountDAO accountDao = null;
+    private AccountsDAO accountsDao = null;
 
 
 
@@ -75,12 +78,12 @@ public class DBHelper extends OrmLiteSqliteOpenHelper
 
 
 
-    //синглтон для AccountDAO
-    public AccountDAO getAccountDAO() throws SQLException{
-        if(accountDao == null){
-            accountDao = new AccountDAO(getConnectionSource(), Account.class);
+    //синглтон для AccountsDAO
+    public AccountsDAO getAccountDAO() throws SQLException{
+        if(accountsDao == null){
+            accountsDao = new AccountsDAO(getConnectionSource(), Account.class);
         }
-        return accountDao;
+        return accountsDao;
     }
 
 
@@ -92,6 +95,6 @@ public class DBHelper extends OrmLiteSqliteOpenHelper
     @Override
     public void close(){
         super.close();
-        accountDao = null;
+        accountsDao = null;
     }
 }

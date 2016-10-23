@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ToggleButton
+            android:layout_weight="1"
+            android:layout_margin="0dp"
+            android:padding="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/month1"
+            android:textOn="янв"
+            android:textOff="янв"/>
+
+        <ToggleButton
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/month2"
+            android:textOn="фев"
+            android:textOff="фев"/>
+
+        <ToggleButton
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/month3"
+            android:textOn="мар"
+            android:textOff="мар"/>
+
+        <ToggleButton
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/month4"
+            android:textOn="апр"
+            android:textOff="апр"/>
+
+        <ToggleButton
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/month5"
+            android:textOn="май"
+            android:textOff="май"/>
+
+        <ToggleButton
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/month6"
+            android:textOn="июн"
+            android:textOff="июн"/>
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ToggleButton
+            android:layout_weight="1"
+            android:layout_margin="0dp"
+            android:padding="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/month7"
+            android:textOn="июл"
+            android:textOff="июл"/>
+
+        <ToggleButton
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/month8"
+            android:textOn="авг"
+            android:textOff="авг"/>
+
+        <ToggleButton
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/month9"
+            android:textOn="сен"
+            android:textOff="сен"/>
+
+        <ToggleButton
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/month10"
+            android:textOn="окт"
+            android:textOff="окт"
+            android:checked="true"/>
+
+        <ToggleButton
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/month11"
+            android:textOn="ноя"
+            android:textOff="ноя"
+            android:checked="true"/>
+
+        <ToggleButton
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/month12"
+            android:textOn="дек"
+            android:textOff="дек"
+            android:checked="true"/>
+
+    </LinearLayout>
+
+</LinearLayout>
