@@ -7,6 +7,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -52,29 +53,32 @@ public class DrawerActivity extends AppCompatActivity implements NavigationView.
     public boolean onNavigationItemSelected(@NonNull MenuItem item)
     {
         Fragment fragment = null;
-        Class fragmentClass;
+        Class fragmentClass = null;
 
 
         switch (item.getItemId())
         {
             case R.id.nav_accounts:
             {
-                Intent intent = new Intent(getApplicationContext(), AccountsActivity.class);
-                startActivity(intent);
+                fragmentClass = AccountsActivity.class;
+                // Intent intent = new Intent(getApplicationContext(), AccountsActivity.class);
+                // startActivity(intent);
 
                 break;
             }
             case R.id.nav_month:
             {
-                Intent intent = new Intent(getApplicationContext(), RecordsActivity.class);
-                startActivity(intent);
+                fragmentClass = RecordsActivity.class;
+                // Intent intent = new Intent(getApplicationContext(), RecordsActivity.class);
+                // startActivity(intent);
 
                 break;
             }
             case R.id.nav_year:
             {
-                Intent intent = new Intent(getApplicationContext(), PeriodsActivity.class);
-                startActivity(intent);
+                fragmentClass = PeriodsActivity.class;
+                // Intent intent = new Intent(getApplicationContext(), PeriodsActivity.class);
+                // startActivity(intent);
 
                 break;
             }
@@ -87,7 +91,7 @@ public class DrawerActivity extends AppCompatActivity implements NavigationView.
         }
 
 
-       /* try {
+       try {
             fragment = (Fragment) fragmentClass.newInstance();
         } catch (Exception e) {
             e.printStackTrace();
@@ -95,14 +99,13 @@ public class DrawerActivity extends AppCompatActivity implements NavigationView.
 
         // Insert the fragment by replacing any existing fragment
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.flContent, fragment).commit();
+        fragmentManager.beginTransaction().replace(R.id.frame, fragment).commit();
 
         // Highlight the selected item has been done by NavigationView
-        menuItem.setChecked(true);
+        item.setChecked(true);
         // Set action bar title
-        setTitle(menuItem.getTitle());
+        setTitle(item.getTitle());
         // Close the navigation drawer
-        mDrawer.closeDrawers();*/
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

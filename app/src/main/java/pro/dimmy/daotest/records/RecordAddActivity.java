@@ -14,6 +14,7 @@ public class RecordAddActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_record_add);
+        setTitle("Добавить запись");
 
 
         TabHost tabHost = (TabHost) findViewById(R.id.tab_host_record_add);
